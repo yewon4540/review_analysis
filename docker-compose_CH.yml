@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ch_test:
+    build: 
+      dockerfile: Dockerfile_CH
+    volumes:
+      - .:/home
+    restart: unless-stopped
+    read_only: True
+    ports:
+      - 9091:9091
